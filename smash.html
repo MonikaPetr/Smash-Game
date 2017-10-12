@@ -8,16 +8,35 @@
     <link rel="stylesheet" href="./css/smash.css">
 </head>
 <body>
+    <div class="current-score" id="currentScore">0</div>
+    <div class="deadline"></div>
     <div class="flex-container">
-        <div class="flex-item">
-
+        <div class="flex-item" id="minion1" onclick="smashMinion('minion1')">
+            <div class="eye1"></div>
+            <div class="eye2"></div>
         </div>
-        <div class="flex-item">
-
+        <div class="flex-item" id="minion2" onclick="smashMinion('minion2')">
+            <div class="eye1"></div>
+            <div class="eye2"></div>
         </div>
-        <div class="flex-item">
-
+        <div class="flex-item" id="minion3" onclick="smashMinion('minion3')">
+            <div class="eye1"></div>
+            <div class="eye2"></div>
         </div>
     </div>
+
+    <div class="overflow" id="gameHover">
+        <div class="start-game" id="startBlock">
+            <h2>New game</h2>
+            <button type="button" onclick="startGame()" name="button">Start</button>
+        </div>
+        
+    <div class="good-game" id="gameoverBlock">
+        <h2>Score: <span id="result"></span></h2>
+        <button type="button" name="button" onclick="restartGame()">Restart</button>
+    </div>
+    </div>
+    
 </body>
+<script type="text/javascript" src="./js/smash.js"></script>
 </html>

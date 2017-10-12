@@ -3,17 +3,95 @@
   display: flex;
   -webkit-align-items: flex-end;
   align-items: flex-end;
-  background: lightgrey;
+  background: #f0f0f0;
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0; }
   .flex-container .flex-item {
-    background: blue;
+    background: #30af0e;
+    width: 300px;
+    height: 100px;
+    margin-right: 80px;
+    margin-left: 120px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative; }
+  .flex-container .eye1 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    top: 40px;
+    left: 40px;
+    border-radius: 50%; }
+  .flex-container .eye2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    top: 40px;
+    right: 40px;
+    border-radius: 50%; }
+
+.overflow {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6); }
+  .overflow .start-game {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
     width: 300px;
     height: 200px;
-    margin-right: 80px;
-    margin-left: 120px; }
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -100px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid black;
+    padding-top: 20px; }
+  .overflow .good-game {
+    position: absolute;
+    display: none;
+    z-index: 1000;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -100px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid black;
+    padding-top: 20px; }
+
+.current-score {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-weight: bold;
+  color: black;
+  font-size: 40px;
+  z-index: 50; }
+
+.deadline {
+  position: absolute;
+  z-index: 20;
+  bottom: 500px;
+  width: 100%;
+  left: 0;
+  background: red;
+  height: 10px; }
 
 /*# sourceMappingURL=smash.css.map */
