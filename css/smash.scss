@@ -1,0 +1,22 @@
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    background: lightgrey;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .flex-item {
+    background: blue;
+    width: 300px;
+    height: 200px;
+    margin-right: 80px;
+    margin-left: 120px;
+}
+}
+
+
