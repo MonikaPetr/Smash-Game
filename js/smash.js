@@ -3,6 +3,8 @@ var minion2 = document.getElementById("minion2");
 var minion3 = document.getElementById("minion3"); 
 
 var result = 0;
+var level = 1;
+var i = 0;
 
 function startGame() {
     document.getElementById("startBlock").style.display = "none";
@@ -14,7 +16,9 @@ function startGame() {
 }
 
 function init() {
-    growMinion()
+    level = 1;
+    result = 0;
+    growMinion();
 }
 
 var i = 0;
@@ -33,14 +37,28 @@ function growMinion() {
         minion2.style.height = minion2.offsetHeight + 10 + "px";
         minion3.style.height = minion3.offsetHeight + 10 + "px";
         growMinion();
-    }, 40)
+    }, 300 / level);
 }
     
 
-function smashMinion(goblinas){
-    document.getElementById(goblinas).style.height = 100 + "px";
+function smashMinion(goblin){
+    document.getElementById(goblin).style.height = 100 + "px";
     result += 1;
-    document.getElementById("currentScore").innerHTML = result;
+    
+   document.getElementById("currentScore").innerHTML = result;
+   if (result % 10 === 0) {
+       
+       levelUp();
+   }
+}
+
+function levelUp(){
+    level++;
+    document.getElementById("levelUp").style.display = "block";
+    document.getElementById("levelUp").innerHTML = "Level up: " + level;
+    setTimeout(function(){
+    document.getElementById("levelUp").style.display = none;
+    }, 300);
 }
 
 function gameOver() {

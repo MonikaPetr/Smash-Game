@@ -94,4 +94,16 @@
   background: red;
   height: 10px; }
 
+.level {
+  position: absolute;
+  font-size: 40px;
+  color: red;
+  width: 100%;
+  height: 30px;
+  z-index: 99;
+  font-weight: bold;
+  text-align: center;
+  top: 50px;
+  display: none; }
+
 /*# sourceMappingURL=smash.css.map */
